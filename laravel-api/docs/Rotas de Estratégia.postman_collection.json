@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "7205bec4-7d91-4e2f-b2fb-967b0141009c",
+		"name": "Rotas de Estratégia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34268856"
+	},
+	"item": [
+		{
+			"name": "Rota de Prioridade 10",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Rota de Prioridade 40",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Rota de Prioridade 30",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Rota de Prioridade 20",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Rota de Prioridade com hora incorreta",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Rota de Prioridade com estratégia inexistente",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Rota para criar Estratégias",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dsEstrategia\": \"RETIRA\",\r\n    \"nrPrioridade\": 10,\r\n    \"horarios\":[\r\n        {\r\n        \"dsHorarioInicio\": \"09:00\",\r\n        \"dsHorarioFinal\": \"10:00\",\r\n        \"nrPrioridade\": 40\r\n        },\r\n        {\r\n        \"dsHorarioInicio\": \"10:01\",\r\n        \"dsHorarioFinal\": \"11:00\",\r\n        \"nrPrioridade\": 30\r\n        },\r\n        {\r\n        \"dsHorarioInicio\": \"11:01\",\r\n        \"dsHorarioFinal\": \"12:00\",\r\n        \"nrPrioridade\": 20\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/estrategiaWMS"
+			},
+			"response": []
+		},
+		{
+			"name": "Rota para criar Estratégias com hora incorreta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dsEstrategia\": \"RETIRA\",\r\n    \"nrPrioridade\": 10,\r\n    \"horarios\":[\r\n        {\r\n        \"dsHorarioInicio\": \"09:00\",\r\n        \"dsHorarioFinal\": \"10:00\",\r\n        \"nrPrioridade\": 40\r\n        },\r\n        {\r\n        \"dsHorarioInicio\": \"10:01\",\r\n        \"dsHorarioFinal\": \"11:00\",\r\n        \"nrPrioridade\": 30\r\n        },\r\n        {\r\n        \"dsHorarioInicio\": \"11:01\",\r\n        \"dsHorarioFinal\": \"12:00\",\r\n        \"nrPrioridade\": 20\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/estrategiaWMS"
+			},
+			"response": []
+		},
+		{
+			"name": "Rota para criar Estratégias com hora inferior ao inicio",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dsEstrategia\": \"RETIRA\",\r\n    \"nrPrioridade\": 10,\r\n    \"horarios\":[\r\n        {\r\n        \"dsHorarioInicio\": \"09:00\",\r\n        \"dsHorarioFinal\": \"10:00\",\r\n        \"nrPrioridade\": 40\r\n        },\r\n        {\r\n        \"dsHorarioInicio\": \"10:01\",\r\n        \"dsHorarioFinal\": \"11:00\",\r\n        \"nrPrioridade\": 30\r\n        },\r\n        {\r\n        \"dsHorarioInicio\": \"11:01\",\r\n        \"dsHorarioFinal\": \"12:00\",\r\n        \"nrPrioridade\": 20\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/estrategiaWMS"
+			},
+			"response": []
+		}
+	]
+}
